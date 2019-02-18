@@ -1,0 +1,16 @@
+.header-post {
+    box-sizing: border-box;
+    width: 640px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    border: 1px solid rgb(201, 198, 198);
+    margin-top: 25px;
+}
+
+.thumbnails {
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    padding: 20px;
+}
