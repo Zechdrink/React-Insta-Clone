@@ -4,7 +4,7 @@ import './App.css';
 
 import dummyData from './dummy-data.js';
 import PostContainer from './components/PostContainer/PostContainer.js'
-// import Header from './components/PostContainer/PostHeader.js'
+import CommentContainer from './components/CommentSection/CommentContainer.js';
 
 
 
@@ -21,6 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <PostContainer postData = {this.state.postData}/>
+        <CommentContainer comments = {this.state.postData.comments}/>
       </div>
     );
   }
