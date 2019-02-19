@@ -1,10 +1,11 @@
 import React from 'react';
+import './search.css'
 
 const SearchBar = props => {
     return (
         <div className = "nav-bar">
             <div className = "left-nav">
-                <i class="fab fa-instagram fa-2x"></i>
+                <i className="fab fa-instagram fa-2x"></i>
                 <h2>Instagram</h2>
             </div>
 

@@ -6,9 +6,9 @@ import "./postcontainer.css";
 const PostContainer = props => {
     return (
         <div>
-            {props.postData.map((post) => { 
+            {props.postData.map((post, index) => { 
                 return (
-                    <div>
+                    <div key = {index}>
                         <Post post = {post}/>
                     </div>
                 )
