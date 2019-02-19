@@ -1,15 +1,25 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Comment from './Comment.js'
+import Comment from './Comment.js';
+import './comment.css';
 
-const CommentContainer = props => {
-    return (
+class CommentContainer extends React.Component {
+    constructor (props){
+        super(props);
+        this.state = {
+            comments: props.comments
+        };
+    }
+
+    render(){ 
+        return (
         <div>
-            {props.comments.map((comment)=>{ 
-                return <Comment comment = {comment}/>
+            {this.state.comments.map((comment)=>{ 
+               return <Comment comment = {comment}/>
             })}
         </div>
     )
+    }
 }   
 
 export default CommentContainer;

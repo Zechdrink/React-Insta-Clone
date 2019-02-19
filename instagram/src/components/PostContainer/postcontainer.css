@@ -1,11 +1,11 @@
 .header-post {
-    box-sizing: border-box;
-    width: 640px;
     display: flex;
-    margin: 0 auto;
     align-items: center;
+}
+
+.border-wrapper {
     border: 1px solid rgb(201, 198, 198);
-    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 .thumbnails {
@@ -13,4 +13,17 @@
     height: 30px;
     width: 30px;
     padding: 20px;
+}
+
+.likes {
+    text-align: left;
+}
+
+input {
+    width: 95%;
+    padding: 15px 0;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    border-top: 1px solid rgb(194, 189, 189);
 }
