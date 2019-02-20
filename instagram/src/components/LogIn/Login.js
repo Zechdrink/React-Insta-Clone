@@ -2,8 +2,8 @@ import React from 'react';
 import './login.css';
 
 class Login extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {};
     }
     
@@ -26,7 +26,7 @@ class Login extends React.Component {
                             placeholder = "enter password"
                             /> 
                         </form>
-                        <button>Login</button>
+                        <button onClick = {this.props.toggleLogIn}>Login</button>
                         <p>Don't have an account?</p>
                         <button>Click Here</button>
                     </section>
