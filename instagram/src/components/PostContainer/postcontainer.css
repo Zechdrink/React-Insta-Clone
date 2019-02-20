@@ -25,3 +25,7 @@
 .like-icons i {
     padding: 10px 10px 7px 0;
 }
+
+.like-icons i:hover {
+    color: red;
+}

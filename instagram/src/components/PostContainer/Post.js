@@ -1,23 +1,37 @@
 import React from 'react';
-
 import PostHeader from './PostHeader.js';
 import CommentContainer from '../CommentSection/CommentContainer.js';
-import CommentInput from '../CommentSection/CommentInput.js';
-import LikeSection from './LikeSection.js'
+import LikeSection from './LikeSection.js';
 
-const Post = props => {
+
+
+
+class Post extends React.Component {
+   constructor(props){
+       super(props);
+       this.state = {
+           likes: props.post.likes  
+       }
+   }
+   
+   incrementLikes = () => {
+       let likes = this.state.likes + 1;
+       this.setState({likes});     
+    }
+   
+   
+   render(){
     return (
         <div className = "border-wrapper">
 
-            <PostHeader post = {props.post}/>
-
-            <img src = {props.post.imageUrl} alt = {props.post.username}/>
-            <LikeSection post = {props.post}/>
-            <CommentContainer comments = {props.post.comments}/>
-            <CommentInput/>
+            <PostHeader post = {this.props.post}/>
+            <img src = {this.props.post.imageUrl} alt = {this.props.post.username}/>
+            <LikeSection incrementLikes = {this.incrementLikes} likes  = {this.state.likes}/>
+            <CommentContainer comments = {this.props.post.comments}/>
 
         </div>
     )
+   }
 }
 
 export default Post;

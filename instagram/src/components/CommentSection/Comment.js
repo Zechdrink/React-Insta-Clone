@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Comment = props => {
     return (
         <div className = "comments-wrapper">
-          <span className = "users"><strong>{props.comment.username}</strong></span>
-          <span className = "comments">{": "}{props.comment.text}</span>
+          <span className = "users"><strong>{props.comment.username}:</strong></span>
+          <span className = "comments">{props.comment.text}</span>
         </div>
     
     
