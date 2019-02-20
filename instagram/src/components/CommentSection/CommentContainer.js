@@ -22,13 +22,12 @@ class CommentContainer extends React.Component {
     addComment = event => {
         event.preventDefault();
         const comment = { text: this.state.newComment, username: 'Chris Pratt' };
-        const comments = this.state.comments.slice();
+        const comments = this.state.comments;
         if(this.state.newComment === ""){
             return alert("You forgot to leave a comment Silly!")
         } else {
-        comments.push(comment);
         this.setState({
-            comments: comments,
+            comments: [...comments, comment],
             newComment: ""
         });
       }
@@ -43,6 +42,7 @@ class CommentContainer extends React.Component {
             <CommentInput 
             handleChanges = {this.handleChanges}
             addComment = {this.addComment}
+            newComment = {this.state.newComment}
             />
         </div>
     )
