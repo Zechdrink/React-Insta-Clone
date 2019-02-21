@@ -16,7 +16,10 @@ class Login extends React.Component {
                         <form>
                             <input
                             type = "text"
+                            onChange = {this.props.handleChanges}
                             placeholder = "enter username"
+                            handleChanges = {this.props.handleChanges}
+                            inputText = {this.props.inputText}
                             />
                         </form>
 
@@ -26,7 +29,7 @@ class Login extends React.Component {
                             placeholder = "enter password"
                             /> 
                         </form>
-                        <button onClick = {this.props.toggleLogIn}>Login</button>
+                        <button onClick = {this.props.signIn}>Login</button>
                         <p>Don't have an account?</p>
                         <button>Click Here</button>
                     </section>
