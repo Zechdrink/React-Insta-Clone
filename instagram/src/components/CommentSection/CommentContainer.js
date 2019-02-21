@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Comment from './Comment.js';
 import CommentInput from './CommentInput.js'
-import './comment.css';
 
 class CommentContainer extends React.Component {
     constructor (props){
@@ -19,9 +18,13 @@ class CommentContainer extends React.Component {
         });
     }
 
+    trollAlert = event => {
+        return alert("Anddddd you still don't.")
+    }
+
     addComment = event => {
         event.preventDefault();
-        const comment = { text: this.state.newComment, username: 'Chris Pratt' };
+        const comment = { text: this.state.newComment, username: localStorage.getItem('user') };
         const comments = this.state.comments;
         if(this.state.newComment === ""){
             return alert("You forgot to leave a comment Silly!")
@@ -51,10 +54,10 @@ class CommentContainer extends React.Component {
 
 
 
-CommentContainer.propTypes = {
-    comments: PropTypes.arrayOf(
-        PropTypes.shape({ username: PropTypes.string, text: PropTypes.string})
-    )
-};
+// CommentContainer.propTypes = {
+//     comments: PropTypes.arrayOf(
+//         PropTypes.shape({ username: PropTypes.string, text: PropTypes.string})
+//     )
+// };
 
 export default CommentContainer;

@@ -2,9 +2,12 @@ import React from 'react';
 import PostHeader from './PostHeader.js';
 import CommentContainer from '../CommentSection/CommentContainer.js';
 import LikeSection from './LikeSection.js';
+import styled from 'styled-components';
 
 
-
+const BorderWrap = styled.div`
+    margin-bottom: 15px;
+`;
 
 class Post extends React.Component {
    constructor(props){
@@ -19,17 +22,17 @@ class Post extends React.Component {
        this.setState({likes});     
     }
    
-   
+  
    render(){
     return (
-        <div className = "border-wrapper">
+        <BorderWrap className = "border-wrapper">
 
             <PostHeader post = {this.props.post}/>
             <img src = {this.props.post.imageUrl} alt = {this.props.post.username}/>
             <LikeSection incrementLikes = {this.incrementLikes} likes  = {this.state.likes}/>
             <CommentContainer comments = {this.props.post.comments}/>
 
-        </div>
+        </BorderWrap>
     )
    }
 }

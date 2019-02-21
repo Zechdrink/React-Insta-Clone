@@ -1,22 +1,36 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import styled from 'styled-components';
+// import PropTypes from 'prop-types';
+
+const CommentWrapper = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px 25px;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    overflow: hidden;
+`;
+
+const UsernameSpan = styled.span`
+    padding-right: 5px;
+`;
 
 const Comment = props => {
     return (
-        <div className = "comments-wrapper">
-          <span className = "users"><strong>{props.comment.username}:</strong></span>
+        <CommentWrapper>
+          <UsernameSpan className = "users"><strong>{props.comment.username}:</strong></UsernameSpan>
           <span className = "comments">{props.comment.text}</span>
-        </div>
+        </CommentWrapper>
     
     
     )
 }
 
-Comment.propTypes = {
-  comment: PropTypes.shape({
-    username: PropTypes.string,
-    text: PropTypes.string
-  })
-};
+// Comment.propTypes = {
+//   comment: PropTypes.shape({
+//     username: PropTypes.string,
+//     text: PropTypes.string
+//   })
+// };
 
 export default Comment;

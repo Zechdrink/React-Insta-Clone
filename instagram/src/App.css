@@ -1,12 +1,3 @@
-.App {
-  text-align: center;
-  box-sizing: border-box;
-  width: 640px;
-  margin: 0 auto;
-  margin-top: 15px;
-  box-shadow: 10px 0 105px rgb(43, 41, 41), -10px 0 105px rgb(43, 41, 41);
-}
-
 img {
   width: 98%;
-}
+} 
